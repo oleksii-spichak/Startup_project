@@ -1,11 +1,14 @@
 <template>
-  <div id="app">
-    <main_header />
-    <doc_header/>
-    <doc_group/>
-    <doc_summary/>
-    <page_footer/>
-  </div>
+    <div  id="app">
+      <div class="container-fluid">
+        <main_header />
+        <doc_header/>
+        <doc_group/>
+        <doc_summary/>
+        <page_footer/>
+      </div>
+    </div>
+
 </template>
 
 <script>
@@ -32,5 +35,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 960px;
+  margin: 0 auto;
+  height: 100vh;
 }
+
 </style>
