@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main_header">
     <b-navbar toggleable="md" type="info" variant="secondary">
       <b-navbar-brand class="logo" href="#">WebApp</b-navbar-brand>
 
@@ -53,6 +53,8 @@ a {
   border: 1px solid #33d4ff;
   border-radius: 3px;
 }
-
+.main_header {
+  margin-bottom: 20px;
+}
 
 </style>

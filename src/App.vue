@@ -2,10 +2,12 @@
     <div  id="app">
       <div class="container-fluid">
         <main_header />
-        <doc_header/>
-        <doc_group/>
-        <doc_summary/>
-        <page_footer/>
+        <div class="container">
+          <doc_header/>
+          <doc_group/>
+          <doc_summary/>
+          <page_footer/>
+        </div>
       </div>
     </div>
 
@@ -14,7 +16,7 @@
 <script>
 import main_header from './components/main-header.vue'
 import doc_header from './components/doc-header.vue'
-import doc_group from './components/doc-group.vue'
+import doc_group from './components/group/doc-group.vue'
 import doc_summary from './components/doc-summary.vue'
 import page_footer from "@/components/footer";
 

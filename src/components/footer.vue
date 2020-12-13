@@ -27,7 +27,7 @@ export default {
 
 .footer {
   position: relative;
-  bottom: -550px;
+  bottom: -400px;
 
 }
 
