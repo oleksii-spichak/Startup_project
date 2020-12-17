@@ -69,6 +69,7 @@ export default {
     addGroup() {
       this.groups.push(this.newGroup)
     }
+
   }
 }
 </script>
@@ -76,7 +77,7 @@ export default {
 <style scoped lang="scss">
 .edit {
   display: flex;
-  padding-left: 0;
+  padding-left: 18px;
   margin-left: 41.666667%
 }
 .title_name p {
@@ -138,6 +139,7 @@ export default {
 .btn_edit_doc_title {
   margin-left: 10px;
   border: 1px solid #fff;
+  background: #ffffff;
   svg {
     display: inline-block;
     vertical-align: middle;

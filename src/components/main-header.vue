@@ -8,7 +8,7 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item href="#">Home</b-nav-item>
-          <b-nav-item href="#">Create</b-nav-item>
+          <b-nav-item href="#" >Create</b-nav-item>
           <b-nav-item href="#">Load</b-nav-item>
         </b-navbar-nav>
 
