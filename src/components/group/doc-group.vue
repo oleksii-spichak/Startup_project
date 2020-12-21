@@ -36,17 +36,20 @@
 
     </div>
     <doc_row/>
+    <doc-row-2/>
   </div>
 </template>
 
 <script>
 import doc_row from '@/components/doc-row.vue'
+import DocRow2 from "@/components/doc-row-2";
 
 
 
 export default {
   name: "doc_group",
   components: {
+    DocRow2,
     doc_row
   },
   props: {},
