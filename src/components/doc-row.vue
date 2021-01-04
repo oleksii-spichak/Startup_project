@@ -9,14 +9,16 @@
       </div>
       <div class="col-2 first_name">
         <input
-            placeholder="First Name"
-            class="row_first_name"
-            type="text"
+          placeholder="First Name"
+          :value="row.name"
+          class="row_first_name"
+          type="text"
         />
       </div>
       <div class="col-2 last_name">
         <input
             placeholder="Last Name"
+            :value="row.lastName"
             class="row_last_name"
             type="text"
         />
@@ -24,6 +26,7 @@
       <div class="col-2 birthday">
         <input
             placeholder="Birthday"
+            :value="row.bd"
             class="row_date_birthday"
             type="text"
         />
@@ -31,6 +34,7 @@
       <div class="col-2 credit">
         <input
             placeholder="Credit"
+            :value="row.credit"
             class="row_user_credit"
             type="text"
         />
@@ -38,15 +42,16 @@
       <div class="col-2 spend">
         <input
             placeholder="Spend"
+            :value="row.spend"
             class="row_user_spend"
             type="text"
         />
       </div>
       <div class="col-1 dropright">
         <b-dropdown id="dropdown-dropright" dropright text="" variant="Secondary" class="dropright_item">
-          <b-dropdown-item href="#">Duplicate</b-dropdown-item>
-          <b-dropdown-item href="#">Remove</b-dropdown-item>
-          <b-dropdown-item href="#">Move to...</b-dropdown-item>
+          <b-dropdown-item @click="duplicateRow">Duplicate</b-dropdown-item>
+          <b-dropdown-item @click="removeRow">Remove</b-dropdown-item>
+          <b-dropdown-item>Move to...</b-dropdown-item>
         </b-dropdown>
       </div>
     </b-row>
@@ -54,7 +59,19 @@
 <script>
 export default {
 name: "doc_row",
-  props:{},
+  props: ['row', 'id'],
+  methods : {
+    removeRow () {
+      this.$emit('delete-row', this.row.id)
+    },
+    duplicateRow() {
+      const duplicatedRow = {...this.row}
+      // duplicatedRow.id = uuid
+      this.$emit('duplicate-row', duplicatedRow)
+    }
+  }
+
+
 }
 </script>
 
